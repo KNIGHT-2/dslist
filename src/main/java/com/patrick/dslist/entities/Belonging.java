@@ -13,14 +13,14 @@ public class Belonging {
 	@EmbeddedId //Explicando que esse id faz parte de um composição
 	private BelongingPK id = new BelongingPK();
 	
-	private Integer prosition;
+	private Integer position;
 	
 	public Belonging() {}
 
-	public Belonging(Game game, GameList list, Integer prosition) {
+	public Belonging(Game game, GameList list, Integer position) {
 		id.setGame(game);
 		id.setList(list);
-		this.prosition = prosition;
+		this.position = position;
 	}
 
 	public BelongingPK getId() {
@@ -31,12 +31,12 @@ public class Belonging {
 		this.id = id;
 	}
 
-	public Integer getProsition() {
-		return prosition;
+	public Integer getPosition() {
+		return position;
 	}
 
-	public void setProsition(Integer prosition) {
-		this.prosition = prosition;
+	public void setPosition(Integer position) {
+		this.position = position;
 	}
 
 	@Override
